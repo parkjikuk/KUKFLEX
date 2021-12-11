@@ -1,23 +1,40 @@
 import { useCallback } from "react";
 import { useParams } from "react-router";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
 
 function Detail() {
     const {id} = useParams();
-    console.log(id);
+    const [loading, setLoading] = useState(true);
+    const [movie, setMovie] = useState([]);
     
     const getMoive = useCallback(async () => {
         const json = await (
             await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`))
             .json();
-            console.log(json);
+
+            setMovie(json.data.movie);
+            setLoading(false);
+            console.log(json)
+
     },[id])
 
     useEffect(() => {
         getMoive();
     }, [getMoive]);
 
-    return <h1>Detail</h1>
+    return ( 
+     <div>
+         {loading ? <h1>Loading...</h1> : 
+         <>
+          <img src={movie.large_cover_image} alt={movie.title}/> 
+          <h1>{movie.title}</h1>
+          <h2>{`year: ${movie.year}`}</h2>
+          <h2>{`rating: ${movie.rating}`}</h2>
+          <p>{movie.description_full}</p>
+         </>
+          } 
+     </div>
+   )
 }
 
 export default Detail;
