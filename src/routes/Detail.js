@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react/cjs/react.development";
 
 function Detail() {

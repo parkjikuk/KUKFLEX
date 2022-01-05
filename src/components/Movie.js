@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
+
 function Movie({movieImg, title, summary, genres, id}){
     return(
     <div>
@@ -16,7 +17,7 @@ function Movie({movieImg, title, summary, genres, id}){
     </div>
     )
 }
-Movie.ropTypes = {
+Movie.propTypes = {
     id:PropTypes.number.isRequired,
     movieImg: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
