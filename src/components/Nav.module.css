@@ -1,0 +1,39 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4px 64px;
+    left: 0;
+    right: 0;
+    background-color: #2F4F4F;
+    z-index: 10;
+    
+}
+
+.title{
+   display: flex;
+}
+
+.title a{
+  font-size: 20px;
+  padding: 4px 12px;
+}
+
+.title a:hover{
+  color: #00FFFF;
+  transition:color 200ms ease-in-out;
+}
+
+.logo{
+  position: relative;
+  top: 20%;
+  font-size: 40px;
+  text-shadow: 2px 2px #c7cdd4;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
