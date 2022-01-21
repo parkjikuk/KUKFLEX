@@ -1,0 +1,26 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100%;
+    background-image: linear-gradient(to right,
+    #50001e 0%, 
+    #030d42 100%);
+  }
+  
+  a {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+  }
+  
+  a:link { text-decoration: none;}
+  a:visited { text-decoration: none;}
+
+
+  
