@@ -10,7 +10,7 @@ function Home() {
       <div className={styles.container}>
         {navList.map(slide => {
           return (
-            <div className={styles.slideBox}>
+            <div className={styles.slideBox} key={slide.title}>
                 <div className={styles.slideTitle}>
                   <Link to={`/page/${slide.path}/1`}>
                     <div className={styles.titleIcon}>
@@ -21,7 +21,7 @@ function Home() {
                     </div>
                   </Link>
                 </div>
-                <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&${slide.path}&sort_by=year`} />
+                <Slide  ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&${slide.path}&sort_by=year`} />
             </div>
           )
         })}
