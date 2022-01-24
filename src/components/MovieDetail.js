@@ -1,48 +1,31 @@
 import PropTypes from "prop-types";
 import styles from "./MovieDetail.module.css";
 
-
-function MovieDetail({ background_image_original, coverImg, rating, runtime, description_full, title, genres }) {
+function MovieDetail({ background_image_original, coverImg, rating, runtime, description_full, title, url }) {
   return (
     <div className={styles.movie}>
-      {/* Background Img */}
       <div className={styles.background}>
-        <img className={styles.Detail_bg} src={background_image_original} />
+        <img className={styles.Detail_bg} src={background_image_original} alt=""/>
       </div>
-      {/* ShortView (Img, Title, rating, runtime...) */}
       <div className={styles.show}>
         <div className={styles.shortView}>
-          {/* Img */}
           <div className={styles.shortView_Img}>
             <img src={coverImg} alt={title} />
           </div>
-          {/* title, rating, runtime, genre */}
           <div className={styles.shortView_letters}>
             <h3>
               {title}
             </h3>
             <p>{rating ? `rating: ${rating} / 10` : null}</p>
-            <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>
-            {
-              genres ?
-                // genre is the 'array'
-                <div>
-                  <b>{'genres'}</b>
-                  <ul>{genres.map(g => <li key={g}>{g}</li>)}</ul>
-                </div>
-                : null
-            }
+            <p>{runtime ? `runtime: ${runtime} (min)` : null}</p> 
+            <h3 className={styles.movie_url}><a href={url} target="_blank" rel="noreferrer">SEE THE MOVIE</a></h3>          
           </div>
         </div>
-
-        {/* Description */}
-        {
-          description_full ?
+        {description_full ?
             <div className={styles.descript}>
               <p>{description_full}</p>
-            </div>
-            : null
-        }
+            </div> 
+            : null}
       </div>
     </div>
   )
