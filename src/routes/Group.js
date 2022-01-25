@@ -1,16 +1,19 @@
 import { useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react/cjs/react.development";
 import Load from "../components/Load";
 import MovieGroup from "../components/MovieGroup";
-import {  useSetRecoilState } from "recoil";
-import { focusNav} from "../atom/Atoms";
+import { useSetRecoilState, useRecoilState } from "recoil";
+import { listPageReLoading, focusNav } from "../atom/Atoms";
 import styles from "./Group.module.css";
+
+const pageNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function Group() {
     const {page, group} = useParams();
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
+    const [reloading, setReloading] = useRecoilState(listPageReLoading);
     const focusPage = useSetRecoilState(focusNav);
 
 
@@ -27,7 +30,9 @@ function Group() {
     useEffect(() => {
         getMovies();
         focusPage(group);
+        setLoading(true);
     },[getMovies])
+
 
 
     return(
@@ -44,7 +49,20 @@ function Group() {
                 genres={movie.genres}
                 year={movie.year} />
                 )}
-            </div> }
+            </div>}
+        <ul className={styles.pagination}>
+            {loading ? null : pageNums.map(pageNum => {
+                return (
+                    <li key={pageNum}>
+                        <Link 
+                        to={`/page/${group}/${pageNum}`}
+                        onClick={() => setReloading(true)}
+                        className={pageNum == page ? styles.focusing : null }
+                        >{pageNum}</Link>
+                    </li>
+                )
+            })}
+        </ul>
         </div>
     )
 }
