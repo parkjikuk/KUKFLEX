@@ -60,7 +60,7 @@ Opacity : the degree of clearness
 }
 .movie {
   width: 230px;
-  background-color:whitesmoke;
+  background-color:#323232;
   transition: all 0.4s ease;
   border-radius: 10px;
   overflow: hidden;
@@ -78,7 +78,7 @@ Opacity : the degree of clearness
 }
 
 .movieName {
-  text-shadow: 3px 3px #a7b6b8;
+  margin-bottom: 10px;
 }
 
 .letters {
@@ -90,4 +90,43 @@ Opacity : the degree of clearness
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width:1023px){
+  .slide_show{
+    width: 600px;
+  }
+
+  .movie,
+  .movie img{
+    width: 200px;
+  }
+
+  .controller{
+    display: none;
+  }
+}
+
+@media screen and (max-width:767px){
+  .slide_show{
+    width: 220px;
+    height: 330px;
+  }
+
+  .movie{
+    width: 110px;
+  }
+
+  .movie img {
+    width: 110px;
+    height: 205px;
+  }
+
+  .letters{
+    font-size: 10px;
+  }
+
+  .controller{
+    display: none;
+  }
 }

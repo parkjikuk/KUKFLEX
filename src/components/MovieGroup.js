@@ -5,7 +5,7 @@ function MovieGroup({id, coverImg, genres, summary, title,  year}) {
     return (
         <Link to={`/movie/${id}`}>
           <div className={styles.movie} >        
-            <img src={coverImg} className={styles.movie_img} alt={title}/>
+          <img src={coverImg} className={styles.movie_img} alt={title}/>
             <div>
               <h2 className={styles.movie_title}>            
                       {(title.length > 35)
@@ -22,8 +22,7 @@ function MovieGroup({id, coverImg, genres, summary, title,  year}) {
               </ul>
              </div>
           </div>
-         </Link>
-      
+         </Link>  
     )
 }
 

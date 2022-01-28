@@ -1,13 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback} from 'react';
 import styles from "./Slide.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft } from '@fortawesome/free-solid-svg-icons';
 import { faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
-import Load from './Load';
 import { Link } from 'react-router-dom';
 
 function Slide({ ytsApi }) {
-  const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [trans, setTrans] = useState(0);
 
@@ -30,37 +28,30 @@ function Slide({ ytsApi }) {
   }
 
   // get ytsApi from Home.js seperated by group name.
-  const getMovies = async () => {
+  const getMovies = useCallback(async () => {
     const json = await (
       await fetch(ytsApi)
     ).json();
 
     setMovies(json.data.movies);
-    setLoading(false);
-  }
+  }, [ytsApi])
 
   useEffect(() => {
-    setLoading(true);
     getMovies();
-  }, [])
+  }, [getMovies])
 
 
   return (
     <div className={styles.container}>
       <div className={styles.slide_show}>
-        {/* Rendering when loading Ends! */}
-        {(loading)
-          ? <Load />
-          :
           <div className={styles.slides} style={{ transform: `translateX(${trans}px)` }}>
             {
               movies.map((movie) => {
-                if (movie.medium_cover_image != null)
+                if (movie.medium_cover_image !== null)
                 {
                   return (
                     (
-                      // MovieSlide is redering code with Slide!
-                      <div className={styles.movie}>
+                      <div className={styles.movie} key={movie.id}>
                       <Link to={`/movie/${movie.id}`}>
                         <img src={movie.medium_cover_image} alt={movie.title} />
                       </Link>
@@ -69,8 +60,8 @@ function Slide({ ytsApi }) {
                           <div>
                             <h3 className={styles.movieName}>
                               <Link to={`/movie/${movie.id}`}>
-                                {(movie.title.length > 35)
-                                  ? `${movie.title.slice(0, 35)}...`
+                                {(movie.title.length > 30)
+                                  ? `${movie.title.slice(0, 30)}...`
                                   : movie.title}
                               </Link>
                             </h3>
@@ -85,14 +76,8 @@ function Slide({ ytsApi }) {
                 }
               })
             }
-          </div>
-        }
-      </div>
-
-      {/* Button with FontAwesome */}
-      {(loading)
-        ? null
-        :
+          </div>     
+      </div>     
         <div className={styles.controller}>
           <button className={styles.left} onClick={onClickL}>
             <FontAwesomeIcon icon={faCaretSquareLeft}></FontAwesomeIcon>
@@ -101,7 +86,7 @@ function Slide({ ytsApi }) {
             <FontAwesomeIcon icon={faCaretSquareRight}></FontAwesomeIcon>
           </button>
         </div>
-      }
+      
     </div>
   )
 }
