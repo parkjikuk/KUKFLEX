@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import {useState } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import {listPageReLoading, focusNav} from "../atom/Atoms";
 import navList from "../atom/NavList";
 import styles from "./Nav.module.css";
-import { useEffect } from "react/cjs/react.development";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 function Nav(){
@@ -25,22 +25,25 @@ function Nav(){
     return(
         <div className={styles.container}>
             <div className={styles.logo}>
-                <Link to={"/"} onClick={() => setFocusPath("")}>KuKFLIX</Link>
+                <Link to={"/"} onClick={() => setFocusPath("")}>KUKFLEX</Link>
             </div>
 
             <div className={styles.title}>
                  {navList.map(({title, path}) => {
                    return (
-                        <div>
+                        <div className={styles.movie_title} key={title}>
                             <Link to={`/page/${path}/1`}
                              onClick={focusPath !== path ? optionOnClick : null}
                              style={focusPath !== path ? null : {
-                            color: "#00FFFF",
+                             color: "#00FFFF",
                                }} 
                         >{title}</Link>
-                        </div>
+                        </div>                                   
                    )
                  })}
+                 <button className={styles.menu}>
+                    <FontAwesomeIcon icon={faBars} size="2x"></FontAwesomeIcon>
+                 </button>
             </div>
         </div>
     )
