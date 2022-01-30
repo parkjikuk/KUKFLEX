@@ -43,9 +43,17 @@
   color: red;
 }
 
-@media only screen and (max-width:1024px){
+@media screen and (max-width:1024px){
   .movies{
     width: 100%;
     grid-template-columns: repeat(1, minmax(400px, 2fr));
+  }
+}
+
+@media screen and (max-width:767px){
+  .movies{
+    padding: 20px;
+    padding-top: 70px;
+    grid-template-columns: repeat(1, minmax(200px, 2fr));
   }
 }

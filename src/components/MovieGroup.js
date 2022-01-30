@@ -13,13 +13,15 @@ function MovieGroup({id, coverImg, genres, summary, title,  year}) {
                       title
                       }   
               </h2>
-              <h3 className={styles.movie_year}>{year}</h3>
-              <p className={styles.movie_summary}>{summary ? (summary.length > 180 ? `${summary.slice(0, 180)}...` : summary) : null}</p>
-              <ul className={styles.movie_genres}>
-                  {genres.map((g) => 
-                  <li key={g}>{g}</li>
-                  )}
-              </ul>
+              <div className={styles.movie_info}>
+                <h3 className={styles.movie_year}>{year}</h3>
+                <p className={styles.movie_summary}>{summary ? (summary.length > 180 ? `${summary.slice(0, 180)}...` : summary) : null}</p>
+                <ul className={styles.movie_genres}>
+                    {genres.map((g) => 
+                    <li key={g}>{g}</li>
+                    )}
+                </ul>
+              </div>
              </div>
           </div>
          </Link>  

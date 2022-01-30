@@ -24,6 +24,7 @@ function Group() {
         
         setMovies(json.data.movies);
         setLoading(false);
+        console.log(movies);
     }, [group, page])
 
 
