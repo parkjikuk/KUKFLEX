@@ -95,6 +95,7 @@
 @media screen and (max-width:767px){
   .container{
     padding: 4px 30px;
+    width: 100%;
   }
   .logo{
     font-size: 20px;

@@ -77,3 +77,21 @@
     text-decoration: underline;
     color:red;
   }
+
+  @media screen and (max-width:767px){
+    .show{
+      font-size: 10px;
+      height: 100%;
+      padding: 0;
+      position: relative;
+      top: 80px;
+    }
+    .shortView_Img{
+      display: none;
+    }
+
+    .shortView_letters {
+      width: 70%;
+      margin: 0;
+    }
+  }
