@@ -1,17 +1,13 @@
 {
-  "files": {
-    "main.js": "/movie-react-app/static/js/main.f241d95e.chunk.js",
-    "main.js.map": "/movie-react-app/static/js/main.f241d95e.chunk.js.map",
-    "runtime-main.js": "/movie-react-app/static/js/runtime-main.9fbbf759.js",
-    "runtime-main.js.map": "/movie-react-app/static/js/runtime-main.9fbbf759.js.map",
-    "static/js/2.fe6d2af3.chunk.js": "/movie-react-app/static/js/2.fe6d2af3.chunk.js",
-    "static/js/2.fe6d2af3.chunk.js.map": "/movie-react-app/static/js/2.fe6d2af3.chunk.js.map",
-    "index.html": "/movie-react-app/index.html",
-    "static/js/2.fe6d2af3.chunk.js.LICENSE.txt": "/movie-react-app/static/js/2.fe6d2af3.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.9fbbf759.js",
-    "static/js/2.fe6d2af3.chunk.js",
-    "static/js/main.f241d95e.chunk.js"
-  ]
+  "main.css": "/KUKFLEX/static/css/main.f5ee9483.chunk.css",
+  "main.js": "/KUKFLEX/static/js/main.97a65087.chunk.js",
+  "main.js.map": "/KUKFLEX/static/js/main.97a65087.chunk.js.map",
+  "static/js/1.64fb278e.chunk.js": "/KUKFLEX/static/js/1.64fb278e.chunk.js",
+  "static/js/1.64fb278e.chunk.js.map": "/KUKFLEX/static/js/1.64fb278e.chunk.js.map",
+  "runtime~main.js": "/KUKFLEX/static/js/runtime~main.6ae04a8e.js",
+  "runtime~main.js.map": "/KUKFLEX/static/js/runtime~main.6ae04a8e.js.map",
+  "static/css/main.f5ee9483.chunk.css.map": "/KUKFLEX/static/css/main.f5ee9483.chunk.css.map",
+  "index.html": "/KUKFLEX/index.html",
+  "precache-manifest.aa6b6ead35b00ef8b3154dba777f889b.js": "/KUKFLEX/precache-manifest.aa6b6ead35b00ef8b3154dba777f889b.js",
+  "service-worker.js": "/KUKFLEX/service-worker.js"
 }
