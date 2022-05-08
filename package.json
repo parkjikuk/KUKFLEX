@@ -43,5 +43,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://parkjikuk.github.io/KUKFLEX"
+  "homepage": "https://parkjikuk.github.io/KUKFLEX",
+  "devDependencies": {
+    "node-extend": "^0.2.0"
+  }
 }
