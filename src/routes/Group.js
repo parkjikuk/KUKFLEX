@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCallback } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import Load from "../components/Load";
 import MovieGroup from "../components/MovieGroup";
 import { useSetRecoilState, useRecoilState } from "recoil";

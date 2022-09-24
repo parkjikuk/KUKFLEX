@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCallback } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import MovieDetail from "../components/MovieDetail";
 import Load from "../components/Load";
 
