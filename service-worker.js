@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/KUKFLEX/precache-manifest.aa6b6ead35b00ef8b3154dba777f889b.js"
+  "/KUKFLEX/precache-manifest.d118ff982802fc83238b4177cd324b5f.js"
 );
 
 workbox.clientsClaim();

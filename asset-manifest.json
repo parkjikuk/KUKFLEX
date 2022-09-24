@@ -1,13 +1,13 @@
 {
-  "main.css": "/KUKFLEX/static/css/main.f5ee9483.chunk.css",
-  "main.js": "/KUKFLEX/static/js/main.97a65087.chunk.js",
-  "main.js.map": "/KUKFLEX/static/js/main.97a65087.chunk.js.map",
-  "static/js/1.64fb278e.chunk.js": "/KUKFLEX/static/js/1.64fb278e.chunk.js",
-  "static/js/1.64fb278e.chunk.js.map": "/KUKFLEX/static/js/1.64fb278e.chunk.js.map",
-  "runtime~main.js": "/KUKFLEX/static/js/runtime~main.6ae04a8e.js",
-  "runtime~main.js.map": "/KUKFLEX/static/js/runtime~main.6ae04a8e.js.map",
-  "static/css/main.f5ee9483.chunk.css.map": "/KUKFLEX/static/css/main.f5ee9483.chunk.css.map",
+  "main.css": "/KUKFLEX/static/css/main.ac1227e0.chunk.css",
+  "main.js": "/KUKFLEX/static/js/main.5ae4348d.chunk.js",
+  "main.js.map": "/KUKFLEX/static/js/main.5ae4348d.chunk.js.map",
+  "runtime~main.js": "/KUKFLEX/static/js/runtime~main.48cc44dd.js",
+  "runtime~main.js.map": "/KUKFLEX/static/js/runtime~main.48cc44dd.js.map",
+  "static/js/2.476544c5.chunk.js": "/KUKFLEX/static/js/2.476544c5.chunk.js",
+  "static/js/2.476544c5.chunk.js.map": "/KUKFLEX/static/js/2.476544c5.chunk.js.map",
   "index.html": "/KUKFLEX/index.html",
-  "precache-manifest.aa6b6ead35b00ef8b3154dba777f889b.js": "/KUKFLEX/precache-manifest.aa6b6ead35b00ef8b3154dba777f889b.js",
-  "service-worker.js": "/KUKFLEX/service-worker.js"
+  "precache-manifest.d118ff982802fc83238b4177cd324b5f.js": "/KUKFLEX/precache-manifest.d118ff982802fc83238b4177cd324b5f.js",
+  "service-worker.js": "/KUKFLEX/service-worker.js",
+  "static/css/main.ac1227e0.chunk.css.map": "/KUKFLEX/static/css/main.ac1227e0.chunk.css.map"
 }
