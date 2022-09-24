@@ -19,7 +19,7 @@ function MovieDetail({ background_image_original, coverImg, rating, runtime, des
             </h3>
             <p>{rating ? `rating: ${rating} / 10` : null}</p>
             <p>{runtime ? `runtime: ${runtime} (min)` : null}</p> 
-            <h3 className={styles.movie_url}><a href={url} target="_blank" rel="noreferrer">SEE THE MOVIE</a></h3>          
+            <h3 className={styles.movie_url}><a href={url} target="_blank" rel="noopener noreferrer">SEE THE MOVIE</a></h3>          
           </div>
         </div>
         {description_full ?

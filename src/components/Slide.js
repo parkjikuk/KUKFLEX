@@ -47,11 +47,9 @@ function Slide({ ytsApi }) {
       <div className={styles.slide_show}>
           <div className={styles.slides} style={{ transform: `translateX(${trans}px)` }}>
             {
-              movies.map((movie) => {
-                if (movie.medium_cover_image !== null)
-                {
-                  return (
-                    (
+              movies
+              .filter((movie) => movie.medium_cover_image !== null)
+              .map((movie) =>                                 
                       <div className={styles.movie} key={movie.id}>
                       <Link to={`/movie/${movie.id}`}>
                         <img src={movie.medium_cover_image} alt={movie.title} />
@@ -71,11 +69,8 @@ function Slide({ ytsApi }) {
                         <span>{movie.rating ? `rating: ${movie.rating} / 10` : null}</span>
                         <p>{movie.runtime ? `runtime: ${movie.runtime} (min)` : null}</p>
                       </div>
-                    </div>
-                    )
-                  )
-                }
-              })
+                    </div>                                           
+              )
             }
           </div>     
       </div>     

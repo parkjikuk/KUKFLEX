@@ -14,7 +14,7 @@ function Group() {
     const {page, group} = useParams();
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
-    const [reloading, setReloading] = useRecoilState(listPageReLoading);
+    const [setReloading] = useRecoilState(listPageReLoading);
     const focusPage = useSetRecoilState(focusNav);
 
 
@@ -59,7 +59,7 @@ function Group() {
                         <Link 
                         to={`/page/${group}/${pageNum}`}
                         onClick={() => setReloading(true)}
-                        className={pageNum == page ? styles.focusing : null }
+                        className={pageNum === page ? styles.focusing : null }
                         >{pageNum}</Link>
                     </li>
                 )
